@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Mascotas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 5%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f35547;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>PetStyle</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#appointment">Solicitar Cita</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Registro de Mascota</h2>
+        <form action="#" method="post">
+            <label for="nombre_dueno">Nombre del Dueño:</label>
+            <input type="text" id="nombre_dueno" name="nombre_dueno" required>
+
+            <label for="cedula_dueno">Cédula del Dueño:</label>
+            <input type="text" id="cedula_dueno" name="cedula_dueno" required>
+
+            <label for="direccion_dueno">Dirección del Dueño:</label>
+            <input type="text" id="direccion_dueno" name="direccion_dueno" required>
+
+            <label for="nombre_mascota">Nombre de la Mascota:</label>
+            <input type="text" id="nombre_mascota" name="nombre_mascota" required>
+
+            <label for="edad_mascota">Edad de la Mascota:</label>
+            <input type="number" id="edad_mascota" name="edad_mascota" required>
+
+            <label for="raza_mascota">Raza de la Mascota:</label>
+            <input type="text" id="raza_mascota" name="raza_mascota" required>
+
+            <label for="problema">Descripción del Problema:</label>
+            <textarea id="problema" name="problema" rows="4" required></textarea>
+
+            <label for="medicinas">Medicinas Necesarias:</label>
+            <textarea id="medicinas" name="medicinas" rows="4"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

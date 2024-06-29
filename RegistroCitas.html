@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Citas - PetStyle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo h1 {
+            margin: 0;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            margin: 100px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #ff6f61;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .back-button {
+    display: block;
+    width: -moz-fit-content; /* Firefox 3+ */
+    width: -webkit-fit-content; /* Chrome, Safari */
+    width: fit-content; /* Standard */
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+}
+
+
+        .back-button:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>PetStyle</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="citas.html">Solicitar Cita</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Citas Solicitadas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Doctor</th>
+                    <th>Usuario</th>
+                    <th>Servicio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>15/07/2024</td>
+                    <td>10:00 AM</td>
+                    <td>Dr. Juan Pérez</td>
+                    <td>María López</td>
+                    <td>Consulta General</td>
+                </tr>
+                <tr>
+                    <td>16/07/2024</td>
+                    <td>11:00 AM</td>
+                    <td>Dr. Ana Martínez</td>
+                    <td>Carlos Rodríguez</td>
+                    <td>Vacunación</td>
+                </tr>
+                <tr>
+                    <td>17/07/2024</td>
+                    <td>12:00 PM</td>
+                    <td>Dr. José García</td>
+                    <td>Laura Fernández</td>
+                    <td>Desparasitación</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        <a href="OptionesW.html" class="back-button">Volver al Inicio</a>
+    </div>
+</body>
+</html>
