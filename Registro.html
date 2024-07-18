@@ -95,11 +95,11 @@
 <body>
     <header>
         <div class="logo">
-            <h1>veterinaria patitas felices dolores</h1>
+            <h1>Patitas Felices Dolores</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Inicio</a></li>
+                <li><a href="OptionesW.html">Inicio</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#appointment">Solicitar Cita</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -133,8 +133,15 @@
             <label for="medicinas">Medicinas Necesarias:</label>
             <textarea id="medicinas" name="medicinas" rows="4"></textarea>
 
-            <button type="submit">Enviar</button>
+            <button type="submit" onclick="regresar()">Enviar</button>
         </form>
     </div>
+    <script>
+        function regresar() {
+            alert("Registro Exitoso");
+            window.location.href = 'OptionesU.html';
+            
+        }
+    </script>
 </body>
 </html>

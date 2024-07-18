@@ -15,14 +15,15 @@
         header {
             background-color: #ff6f61;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
+            width: 98%;
             position: fixed;
             top: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
         }
 
         header .logo h1 {
@@ -35,10 +36,11 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            margin-left: 2rem;
+            margin-left: 1rem;
         }
 
         nav ul li a {
@@ -87,31 +89,58 @@
         table tr:hover {
             background-color: #f1f1f1;
         }
-        .back-button {
-    display: block;
-    width: -moz-fit-content; /* Firefox 3+ */
-    width: -webkit-fit-content; /* Chrome, Safari */
-    width: fit-content; /* Standard */
-    background-color: #ff6f61;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 20px auto;
-    transition: background-color 0.3s;
-}
 
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filters input, .filters select {
+            width: 40%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
 
         .back-button:hover {
             background-color: #ff4d4d;
         }
     </style>
+    <script>
+        function filterAppointments() {
+            const doctorFilter = document.getElementById('doctorFilter').value.toLowerCase();
+            const cedulaFilter = document.getElementById('cedulaFilter').value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const doctor = row.cells[2].textContent.toLowerCase();
+                const cedula = row.cells[3].textContent.toLowerCase();
+                if ((doctor.includes(doctorFilter) || !doctorFilter) && (cedula.includes(cedulaFilter) || !cedulaFilter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>veterinaria patitas felices dolores</h1>
+            <h1>Patitas Felices Dolores</h1>
         </div>
         <nav>
             <ul>
@@ -124,6 +153,12 @@
     </header>
     <div class="container">
         <h1>Citas Solicitadas</h1>
+        <div class="filters">
+            <center>
+                <input type="text" id="doctorFilter" onkeyup="filterAppointments()" placeholder="Filtrar por Doctor">
+                <input type="text" id="cedulaFilter" onkeyup="filterAppointments()" placeholder="Filtrar por Número de Cédula">
+            </center>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -139,22 +174,36 @@
                     <td>15/07/2024</td>
                     <td>10:00 AM</td>
                     <td>Dr. Juan Pérez</td>
-                    <td>María López</td>
+                    <td>8-111-11111</td>
                     <td>Consulta General</td>
                 </tr>
                 <tr>
                     <td>16/07/2024</td>
                     <td>11:00 AM</td>
                     <td>Dr. Ana Martínez</td>
-                    <td>Carlos Rodríguez</td>
+                    <td>8-222-2222</td>
                     <td>Vacunación</td>
                 </tr>
                 <tr>
                     <td>17/07/2024</td>
                     <td>12:00 PM</td>
                     <td>Dr. José García</td>
-                    <td>Laura Fernández</td>
+                    <td>8-333-3333</td>
                     <td>Desparasitación</td>
+                </tr>
+                <tr>
+                    <td>17/07/2024</td>
+                    <td>12:00 PM</td>
+                    <td>Dr. José García</td>
+                    <td>8-555-5555</td>
+                    <td>Dolor de bariga</td>
+                </tr>
+                <tr>
+                    <td>17/07/2024</td>
+                    <td>12:00 PM</td>
+                    <td>Dr. José García</td>
+                    <td>8-44-4444</td>
+                    <td>Tristesa general</td>
                 </tr>
                 <!-- Add more rows as needed -->
             </tbody>
